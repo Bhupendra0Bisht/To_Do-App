@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    max-width:80%;
+    height: 100%;
+    background: linear-gradient(100deg, #153677, #4e085f);
+    margin-top: 5%;
+    margin-left: 10%;
+}
+
+
+#Interface{
+    background-color: white;
+    width: 60vw;
+    min-height: 30vh;
+    border-radius: 2vw;
+    padding: 4vh 3vw  ;
+}
+#Interface h2{
+    display: flex;
+    align-items: center;
+    color: #002765;
+    font-size: 2.8vw;
+    margin-bottom: 2.5vh;
+}
+#Interface h2 img {
+    width: 3vw;
+}
+#Interface img{
+    width: 2.5vw;
+    margin-left: 1.5vw;
+}
+
+
+#inputBox{
+    background-color: #e9e5e5;
+    border-radius: 10vw;
+    position: relative;
+    width: 100%;
+}
+#inputBox button{
+    border: none;
+    outline: none;
+    padding: 0.9vw 4vw;
+    background-color: #ff5945;
+    color: white;
+    font-size: 1.8vw;
+    border-radius: 10vw;
+    position: absolute;
+    left: 80%;
+    cursor: pointer;
+}
+#inputBox input{
+    padding: 1.2vw;
+    font-size: 1.2vw;
+    border-radius: 40px;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+
+#notesLi{
+    margin-top: 2vh;
+    list-style: none;
+    cursor: pointer;
+    position: relative;
+    font-size: 2vw;
+    align-items: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    white-space: normal;
+}
+
+#notesLi span{ 
+    position: absolute;
+    right: 1.5vw;
+    top: 0;
+    height: 3vw;
+    width: 3vw;
+    font-size: 18px;
+    font-weight: 600;
+    color: #555;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+#notesLi span:hover{
+    background-color: #dfe1e4;
+    transform: scale(1.1);
+}
+#notesLi::before{
+    content: '';
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-image: url('circle.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-top: 0.4vw;
+}
+
+
+.checked{
+    color:#555;
+    text-decoration: line-through;
+}
+#notesLi.checked::before{
+    background-image: url('tick.jpg');
+    height: 25px;
+    width: 25px;
+}
+
+
+/* For Mobiles */
+@media (max-width: 450px) {
+   #Interface{
+     width: 80vw;
+     min-height: 32vh;
+     padding: 5vw 4vw;
+   }
+   #Interface h2{
+    font-size: 4vh;
+   }
+   #Interface h2 img{
+    width: 3vh;
+   }
+   #inputBox{
+    width: 70vw;
+    height: 10vw;
+    padding-left: 1vw;
+   }
+   #inputBox button{
+     width: 25vw;
+     height: 10vw;
+     position: absolute;
+     left: 45vw;
+     font-size: 4.4vw;
+   }
+   #inputBox input{
+     font-size: 3.4vw;
+     padding-top: 3vw;
+   }
+   #notesLi{
+    font-size: 4vw;
+    display: flex;
+    gap: 2.4vw;
+   }
+   #notesLi span{
+    font-size: 25px;
+    font-weight: 400;
+    position: absolute;
+    right: 5vw;
+    margin-top: 1vw;
+   }
+   #notesLi::before{
+    height: 5vw;
+    width: 5vw;
+  }
+  #notesLi.checked::before{
+    height: 5vw;
+    width: 5vw;
+  }
+}
+
+/* For iPads*/
+@media (min-width: 450px) and (max-width: 1024px){
+    #Interface{
+        width:  100%;
+        min-height: 32vh;
+        padding: 5vw 4vw;
+    }
+    #Interface h2{
+        font-size: 5vw;
+    }
+    #Interface h2 img{
+        width: 4vw;
+    }
+    #inputBox{
+        width: 70vw;
+        height: 7vw;
+    }
+     #inputBox button{
+         width: 20vw;
+         height: 7vw;
+         position: absolute;
+         left: 50vw;
+         font-size: 3vw;
+    }
+    #inputBox input{
+         font-size: 2.5vw;
+         padding-top: 2vw;
+         padding-left: 2vw;
+    }
+    #notesLi{
+        font-size: 2.5vw;
+        display: flex;
+        gap: 1.5vw;
+    }
+    #notesLi span{
+        font-size: 25px;
+        font-weight: 400;
+        position: absolute;
+        right: 5vw;
+       }
+    
+}
